@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VertekOS - Official Site</title>
+  <title>VertekOS - The Future of OS</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,66 +14,119 @@
     }
     header {
       background-color: #1f1f1f;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
-      border-bottom: 2px solid #3366ff;
+      border-bottom: 3px solid #3366ff;
+    }
+    header img {
+      height: 120px;
+      margin-bottom: 15px;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 3em;
       color: #3366ff;
     }
+    header p {
+      font-size: 1.2em;
+      margin-top: 5px;
+      color: #aaa;
+    }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
     h2 {
       color: #5599ff;
-      border-bottom: 2px solid #3366ff;
-      padding-bottom: 5px;
+      border-bottom: 3px solid #3366ff;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
     }
-    a.button {
+    ul.features {
+      list-style: none;
+      padding: 0;
+    }
+    ul.features li {
+      background: #222;
+      margin-bottom: 12px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #2244cc50;
+      font-size: 1.1em;
+    }
+    .download-btn {
       display: inline-block;
-      padding: 12px 25px;
-      margin: 15px 0;
+      padding: 15px 35px;
       background-color: #3366ff;
       color: white;
-      text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.3em;
       transition: background-color 0.3s ease;
     }
-    a.button:hover {
+    .download-btn:hover {
       background-color: #2244cc;
+    }
+    .gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      max-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #2244cc70;
     }
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       background-color: #1f1f1f;
       font-size: 0.9em;
       color: #777;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+    }
+    footer a {
+      color: #5599ff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- Replace logo.png with your actual logo URL -->
+    <img src="https://raw.githubusercontent.com/vertekteam/vertekteam.github.io/main/logo.png" alt="VertekOS Logo" />
     <h1>VertekOS</h1>
-    <p>Your next-generation operating system</p>
+    <p>The Future of Operating Systems</p>
   </header>
   <main>
-    <section id="download">
-      <h2>Download VertekOS 10</h2>
-      <p>Ready to try the powerful, sleek, and fast VertekOS 10? Download it here and join our community!</p>
-      <a href="https://mega.nz/file/mNEilbQb#m2WBKDPDPKLrk9Pjxsdlit_0D3ni4DPpMW3yrmYk_rY" class="button" target="_blank" rel="noopener noreferrer">Download VertekOS 10</a>
+    <section id="features">
+      <h2>Why Choose VertekOS?</h2>
+      <ul class="features">
+        <li>🚀 Lightning-fast boot and performance</li>
+        <li>🎨 Beautiful, customizable user interface</li>
+        <li>🔒 Advanced security and privacy features</li>
+        <li>⚙️ Easy-to-use installation and updates</li>
+        <li>🌐 Built for developers and power users</li>
+      </ul>
     </section>
 
-    <section id="upcoming">
-      <h2>Coming Soon: VertekOS 11</h2>
-      <
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      <div class="gallery">
+        <img src="https://raw.githubusercontent.com/vertekteam/vertekteam.github.io/main/screenshot1.png" alt="VertekOS Screenshot 1" />
+        <img src="https://raw.githubusercontent.com/vertekteam/vertekteam.github.io/main/screenshot2.png" alt="VertekOS Screenshot 2" />
+        <img src="https://raw.githubusercontent.com/vertekteam/vertekteam.github.io/main/screenshot3.png" alt="VertekOS Screenshot 3" />
+      </div>
+    </section>
+
+    <section id="download">
+      <h2>Download VertekOS 10</h2>
+      <p>Ready to try VertekOS 10? Click the button below to download the ISO file and install today!</p>
+      <a href="https://mega.nz/file/mNEi
