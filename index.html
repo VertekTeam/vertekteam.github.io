@@ -31,24 +31,17 @@
       z-index: -1;
     }
     header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.5rem 2rem;
+      padding: 2rem;
       max-width: 900px;
       margin: 2rem auto 1rem auto;
-    }
-    header img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
+      text-align: center;
+      user-select: none;
     }
     header h1 {
       font-weight: 700;
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin: 0;
       color: #00ffff; /* cyan */
-      user-select: none;
     }
     main {
       max-width: 900px;
@@ -102,16 +95,10 @@
     }
     @media (max-width: 600px) {
       header {
-        flex-direction: column;
-        gap: 0.7rem;
-        text-align: center;
-      }
-      header img {
-        width: 70px;
-        height: 70px;
+        padding: 1.5rem 1rem;
       }
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       main {
         margin: 1rem 1rem 3rem 1rem;
@@ -127,7 +114,6 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="VertekOS Logo" />
     <h1>VertekOS 10</h1>
   </header>
 
