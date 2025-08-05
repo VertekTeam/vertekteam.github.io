@@ -2,97 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VertekOS 10 - Lightweight OS for Gaming and Old PCs</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VertekOS 10 - Lightweight OS for Gaming & Old PCs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f2f4f8;
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
       margin: 0;
       padding: 0;
-      color: #333;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: url('vertekos-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* Overlay to darken background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(10, 15, 25, 0.7);
+      z-index: -1;
     }
     header {
-      background-color: #2e86de;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      max-width: 900px;
+      margin: 2rem auto 1rem auto;
+    }
+    header img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
     }
     header h1 {
-      margin: 0.5rem 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      margin-top: 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin: 0;
+      color: #00ffff; /* cyan */
+      user-select: none;
     }
     main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      max-width: 900px;
+      background: rgba(20, 25, 40, 0.85);
+      margin: 0 auto 3rem auto;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      color: #ccc;
     }
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #2e86de;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 5px;
-      margin-top: 1rem;
+    h2 {
+      color: #00ffff;
+      font-weight: 700;
+      margin-top: 0;
     }
-    .btn:hover {
-      background-color: #1c5fa8;
+    p, li {
+      line-height: 1.5;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
     }
     ul {
       padding-left: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    a.btn-download {
+      display: inline-block;
+      background-color: #00ffff;
+      color: #001f27;
+      font-weight: 700;
+      padding: 1rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.15rem;
+      box-shadow: 0 0 12px #00ffff;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    a.btn-download:hover,
+    a.btn-download:focus {
+      background-color: #00cccc;
+      box-shadow: 0 0 18px #00cccc;
+      outline: none;
     }
     footer {
       text-align: center;
-      padding: 2rem;
       font-size: 0.9rem;
-      color: #888;
+      color: #555;
+      margin-bottom: 1.5rem;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.7rem;
+        text-align: center;
+      }
+      header img {
+        width: 70px;
+        height: 70px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        margin: 1rem 1rem 3rem 1rem;
+        padding: 1.5rem 1.5rem;
+      }
+      a.btn-download {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="VertekOS Logo" />
     <h1>VertekOS 10</h1>
-    <p>A fast, clean Windows 10 LTSC build for gaming & old computers</p>
   </header>
 
   <main>
-    <h2>What is VertekOS 10?</h2>
-    <p><strong>VertekOS 10</strong> is a lightweight, unbranded version of Windows 10 LTSC 2021. Designed to offer stable performance, it's ideal for:</p>
+    <h2>Download VertekOS 10</h2>
+    <p>
+      VertekOS 10 is a lightweight, clean, and unbranded Windows 10 LTSC 2021 build,
+      optimized for gaming PCs and older computers. It comes with no bloatware, minimal processes,
+      and a local account named <code>VertekOS User</code> with PC name <code>VertekOS PC</code>.
+    </p>
 
     <ul>
-      <li><strong>Gaming setups</strong> – fewer background apps and processes</li>
-      <li><strong>Old or low-spec PCs</strong> – minimal resource usage</li>
-      <li><strong>Virtual machines or test environments</strong></li>
+      <li>Based on Windows 10 LTSC 2021</li>
+      <li>Perfect for gaming and low-spec hardware</li>
+      <li>Fast, clean, and stable experience</li>
+      <li>No extra branding in the OS itself</li>
     </ul>
 
-    <h3>Quick Specs</h3>
-    <ul>
-      <li>Based on Windows 10 LTSC 2021 (no Store, Cortana, telemetry, etc.)</li>
-      <li>Local account: <code>VertekOS User</code></li>
-      <li>PC name: <code>VertekOS PC</code></li>
-      <li>No custom branding – standard Windows look</li>
-    </ul>
-
-    <a class="btn" href="https://mega.nz/file/mNEilbQb#m2WBKDPDPKLrk9Pjxsdlit_0D3ni4DPpMW3yrmYk_rY" target="_blank" rel="noopener noreferrer">
-      Download VertekOS 10 (.ISO via Mega)
+    <a class="btn-download" href="https://mega.nz/file/mNEilbQb#m2WBKDPDPKLrk9Pjxsdlit_0D3ni4DPpMW3yrmYk_rY" target="_blank" rel="noopener noreferrer" download>
+      Download VertekOS 10
     </a>
 
-    <h3 style="margin-top: 2rem;">Coming Soon: VertekOS 11</h3>
-    <p>The next version of VertekOS is on the way, with improvements in speed, compatibility, and installation!</p>
+    <h2 style="margin-top: 3rem;">VertekOS 11 - Coming Soon</h2>
+    <p>
+      Stay tuned for VertekOS 11, the next generation OS with new features and improvements,  
+      designed to further enhance gaming and performance on older PCs.
+    </p>
   </main>
 
   <footer>
-    © 2025 VertekOS Project — Built for Speed and Simplicity
+    © 2025 VertekOS Project. All rights reserved.
   </footer>
 </body>
 </html>
